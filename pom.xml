@@ -1,12 +1,41 @@
-<dependencies>
-    <dependency>
-        <groupId>com.graphhopper</groupId>
-        <artifactId>graphhopper-core</artifactId>
-        <version>6.3</version>
-    </dependency>
-    <dependency>
-        <groupId>com.graphhopper</groupId>
-        <artifactId>graphhopper-reader-osm</artifactId>
-        <version>6.3</version>
-    </dependency>
-</dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId> <!-- Replace with your package name -->
+    <artifactId>osm-routing</artifactId> <!-- Replace with your project name -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Java Version -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Use 17 (LTS) -->
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- GraphHopper Core -->
+        <dependency>
+            <groupId>com.graphhopper</groupId>
+            <artifactId>graphhopper-core</artifactId>
+            <version>3.0-pre3</version> <!-- Use the same version for both dependencies -->
+        </dependency>
+
+        <!-- GraphHopper OSM Reader -->
+        <dependency>
+            <groupId>com.graphhopper</groupId>
+            <artifactId>graphhopper-reader-osm</artifactId>
+            <version>3.0-pre3</version> <!-- Same version as graphhopper-core -->
+        </dependency>
+
+    </dependencies>
+
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>graphhopper</id>
+            <url>https://maven.graphhopper.com/release</url>
+        </repository>
+    </repositories>
+</project>
